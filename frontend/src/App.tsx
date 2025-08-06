@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
 // Store
-import { store, persistor } from './store';
+import type { AppDispatch } from './store';
+import { persistor } from './store';
 import { checkAuthStatus } from './store/slices/authSlice';
 
 // Pages
@@ -13,7 +14,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/auth/LoginPage';
 
 const App: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     // Check authentication status on app load
