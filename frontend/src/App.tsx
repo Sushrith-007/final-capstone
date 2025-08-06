@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
 // Store
-import { store, persistor } from './store';
+import { persistor } from './store';
 import { checkAuthStatus } from './store/slices/authSlice';
 
 // Pages
@@ -101,4 +101,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App; 
+export default App;
